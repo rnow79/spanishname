@@ -1,0 +1,16 @@
+{
+    "port": "3000",
+    "database": {
+        "type": "file",
+        "host": null,
+        "db": "words",
+        "username": null,
+        "password": null
+    },
+    "tls": false,
+    "certificate": {
+        "crt": "server.crt",
+        "key": "server.key"
+    },
+    "logRequests": true
+}
