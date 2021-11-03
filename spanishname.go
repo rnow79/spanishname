@@ -26,7 +26,7 @@ type Config struct {
 		Crt string
 		Key string
 	}
-	LogRequests	bool
+	LogRequests bool
 }
 
 var config Config
@@ -98,7 +98,7 @@ func main() {
 	log.Println("starting")
 	log.Println("configuration loaded")
 	http.HandleFunc("/", formatName)
-	
+
 	if config.Tls {
 		//https server, ensure to put both crt and key files in root directory
 		err = http.ListenAndServeTLS(":"+config.Port, config.Certificate.Crt, config.Certificate.Key, nil)
